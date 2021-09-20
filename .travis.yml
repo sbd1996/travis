@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t subodh15/travis -f Dockerfile.dev .
 script:
-  - docker run subodh15/travis npm run test -- --coverage
+  - docker run -e CI=true subodh15/travis npm run test
